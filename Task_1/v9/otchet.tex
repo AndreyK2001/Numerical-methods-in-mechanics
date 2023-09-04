@@ -1,0 +1,231 @@
+\documentclass[a4paper]{article}
+\usepackage[12pt]{extsizes}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{setspace,amsmath}
+\usepackage[left=20mm, top=20mm, right=20mm, bottom=20mm, nohead, footskip=10mm]{geometry}
+\usepackage{indentfirst}
+\usepackage[margin=10pt,font=small,labelfont=bf, labelsep=endash]{caption}
+\usepackage{multirow}
+\usepackage{fourier} 
+\usepackage{array}
+\usepackage{makecell}
+\usepackage{lscape}
+
+
+\begin{document}
+\begin{landscape}
+\begin{center}
+{\Large Решение нелинейных алгебраических уравнений}
+\bigskip
+\end{center}
+
+
+Выполнил: Капелюшников Андрей Сергеевич
+
+Функция: $\cos(e^{|\sin(x)|}) - \alpha x$
+
+
+Первая производная: $-a - \cos(x)e^{|\sin(x)|}sign(\sin(x))\sin(e^{|\sin(x)|})$
+
+
+$\varepsilon = $0.0001
+
+
+\begin{center}
+{\huge $\alpha = 1$, $[a^{1} _r, b^{1} _r] = [0, 0.5]$}
+
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{ccccccccccc}
+\hline
+\multirow{2}{*}{\thead{Корень \\ $\xi_r ^*$}} & \multirow{2}{*}{\thead{Невязка \\ $f_{1} (\xi_r ^*)$}} & \multirow{2}{*}{$x_0 ^{(r)}$} & \multicolumn{5}{c}{Число итераций $N+1$} & \multirow{2}{*}{$M ^* _{(r)}$} & \multirow{2}{*}{$m ^* _{(r)}$} & \multirow{2}{*}{$q ^* _{(r)}$} \\ \cline{4-8}
+                  &                   &                   &  \thead{Половинное \\ деление}  &  \thead{Метод \\ хорд}  &  \thead{Простая \\ итерация}  &  \thead{Метод \\ Эткена} &  \thead{Метод \\ Ньютона} &                   &                   &                   \\ \hline
+0.266390 & -0.000002 & 0.499900 & & 4 & & & & 2.416230 & 0.500000 \\ \hline
+0.266389 & -0.000000 & 0.499900 & & & & & 3 & 2.416230 & 0.500000 \\ \hline
+0.266390 & -0.000001 & 0.499900 & & & 5 & & & & & 0.793116 \\ \hline
+0.266357 & 0.000070 & 0.499900 & 11 & & & & & & &  \\ \hline
+0.266389 & -0.000000 & 0.499900 & & & & 3 & & & & 0.793116 \\ \hline
+\end{tabular}
+\end{table}
+\end{center}
+\bigskip
+\begin{center}
+{\huge $\alpha = 2$, $[a^{2} _r, b^{2} _r] = [0, 0.5]$}
+
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{ccccccccccc}
+\hline
+\multirow{2}{*}{\thead{Корень \\ $\xi_r ^*$}} & \multirow{2}{*}{\thead{Невязка \\ $f_{2} (\xi_r ^*)$}} & \multirow{2}{*}{$x_0 ^{(r)}$} & \multicolumn{5}{c}{Число итераций $N+1$} & \multirow{2}{*}{$M ^* _{(r)}$} & \multirow{2}{*}{$m ^* _{(r)}$} & \multirow{2}{*}{$q ^* _{(r)}$} \\ \cline{4-8}
+                  &                   &                   &  \thead{Половинное \\ деление}  &  \thead{Метод \\ хорд}  &  \thead{Простая \\ итерация}  &  \thead{Метод \\ Эткена} &  \thead{Метод \\ Ньютона} &                   &                   &                   \\ \hline
+0.181950 & -0.000007 & 0.499900 & & 4 & & & & 3.416230 & 1.000000 \\ \hline
+0.181948 & -0.000000 & 0.499900 & & & & & 3 & 3.416230 & 1.000000 \\ \hline
+0.181949 & -0.000003 & 0.499900 & & & 5 & & & & & 0.707330 \\ \hline
+0.181946 & 0.000006 & 0.499900 & 13 & & & & & & &  \\ \hline
+0.181948 & -0.000001 & 0.499900 & & & & 3 & & & & 0.707330 \\ \hline
+\end{tabular}
+\end{table}
+\end{center}
+\bigskip
+\pagebreak
+\begin{center}
+{\huge $\alpha = 3$, $[a^{3} _r, b^{3} _r] = [0, 0.5]$}
+
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{ccccccccccc}
+\hline
+\multirow{2}{*}{\thead{Корень \\ $\xi_r ^*$}} & \multirow{2}{*}{\thead{Невязка \\ $f_{3} (\xi_r ^*)$}} & \multirow{2}{*}{$x_0 ^{(r)}$} & \multicolumn{5}{c}{Число итераций $N+1$} & \multirow{2}{*}{$M ^* _{(r)}$} & \multirow{2}{*}{$m ^* _{(r)}$} & \multirow{2}{*}{$q ^* _{(r)}$} \\ \cline{4-8}
+                  &                   &                   &  \thead{Половинное \\ деление}  &  \thead{Метод \\ хорд}  &  \thead{Простая \\ итерация}  &  \thead{Метод \\ Эткена} &  \thead{Метод \\ Ньютона} &                   &                   &                   \\ \hline
+0.137207 & -0.000007 & 0.499900 & & 4 & & & & 4.416230 & 1.500000 \\ \hline
+0.137205 & -0.000000 & 0.499900 & & & & & 3 & 4.416230 & 1.500000 \\ \hline
+0.137206 & -0.000003 & 0.499900 & & & 5 & & & & & 0.660394 \\ \hline
+0.137207 & -0.000007 & 0.499900 & 10 & & & & & & &  \\ \hline
+0.137205 & -0.000001 & 0.499900 & & & & 3 & & & & 0.660394 \\ \hline
+\end{tabular}
+\end{table}
+\end{center}
+\bigskip
+\begin{center}
+{\huge $\alpha = 4$, $[a^{4} _r, b^{4} _r] = [0, 0.5]$}
+
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{ccccccccccc}
+\hline
+\multirow{2}{*}{\thead{Корень \\ $\xi_r ^*$}} & \multirow{2}{*}{\thead{Невязка \\ $f_{4} (\xi_r ^*)$}} & \multirow{2}{*}{$x_0 ^{(r)}$} & \multicolumn{5}{c}{Число итераций $N+1$} & \multirow{2}{*}{$M ^* _{(r)}$} & \multirow{2}{*}{$m ^* _{(r)}$} & \multirow{2}{*}{$q ^* _{(r)}$} \\ \cline{4-8}
+                  &                   &                   &  \thead{Половинное \\ деление}  &  \thead{Метод \\ хорд}  &  \thead{Простая \\ итерация}  &  \thead{Метод \\ Эткена} &  \thead{Метод \\ Ньютона} &                   &                   &                   \\ \hline
+0.109852 & -0.000006 & 0.499900 & & 4 & & & & 5.416230 & 2.000000 \\ \hline
+0.109850 & -0.000000 & 0.499900 & & & & & 3 & 5.416230 & 2.000000 \\ \hline
+0.109851 & -0.000002 & 0.499900 & & & 5 & & & & & 0.630789 \\ \hline
+0.109863 & -0.000065 & 0.499900 & 10 & & & & & & &  \\ \hline
+0.109850 & -0.000001 & 0.499900 & & & & 3 & & & & 0.630789 \\ \hline
+\end{tabular}
+\end{table}
+\end{center}
+\bigskip
+\pagebreak
+\begin{center}
+{\huge $\alpha = 5$, $[a^{5} _r, b^{5} _r] = [0, 0.5]$}
+
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{ccccccccccc}
+\hline
+\multirow{2}{*}{\thead{Корень \\ $\xi_r ^*$}} & \multirow{2}{*}{\thead{Невязка \\ $f_{5} (\xi_r ^*)$}} & \multirow{2}{*}{$x_0 ^{(r)}$} & \multicolumn{5}{c}{Число итераций $N+1$} & \multirow{2}{*}{$M ^* _{(r)}$} & \multirow{2}{*}{$m ^* _{(r)}$} & \multirow{2}{*}{$q ^* _{(r)}$} \\ \cline{4-8}
+                  &                   &                   &  \thead{Половинное \\ деление}  &  \thead{Метод \\ хорд}  &  \thead{Простая \\ итерация}  &  \thead{Метод \\ Эткена} &  \thead{Метод \\ Ньютона} &                   &                   &                   \\ \hline
+0.091492 & -0.000005 & 0.499900 & & 4 & & & & 6.416230 & 2.500000 \\ \hline
+0.091491 & -0.000000 & 0.499900 & & & & & 3 & 6.416230 & 2.500000 \\ \hline
+0.091495 & -0.000023 & 0.499900 & & & 4 & & & & & 0.610413 \\ \hline
+0.091492 & -0.000006 & 0.499900 & 13 & & & & & & &  \\ \hline
+0.091491 & -0.000000 & 0.499900 & & & & 3 & & & & 0.610413 \\ \hline
+\end{tabular}
+\end{table}
+\end{center}
+\bigskip
+\begin{center}
+{\huge $\alpha = 6$, $[a^{6} _r, b^{6} _r] = [0, 0.5]$}
+
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{ccccccccccc}
+\hline
+\multirow{2}{*}{\thead{Корень \\ $\xi_r ^*$}} & \multirow{2}{*}{\thead{Невязка \\ $f_{6} (\xi_r ^*)$}} & \multirow{2}{*}{$x_0 ^{(r)}$} & \multicolumn{5}{c}{Число итераций $N+1$} & \multirow{2}{*}{$M ^* _{(r)}$} & \multirow{2}{*}{$m ^* _{(r)}$} & \multirow{2}{*}{$q ^* _{(r)}$} \\ \cline{4-8}
+                  &                   &                   &  \thead{Половинное \\ деление}  &  \thead{Метод \\ хорд}  &  \thead{Простая \\ итерация}  &  \thead{Метод \\ Эткена} &  \thead{Метод \\ Ньютона} &                   &                   &                   \\ \hline
+0.078348 & -0.000004 & 0.499900 & & 4 & & & & 7.416230 & 3.000000 \\ \hline
+0.078347 & -0.000000 & 0.499900 & & & & & 3 & 7.416230 & 3.000000 \\ \hline
+0.078350 & -0.000019 & 0.499900 & & & 4 & & & & & 0.595532 \\ \hline
+0.078339 & 0.000059 & 0.499900 & 14 & & & & & & &  \\ \hline
+0.078347 & -0.000000 & 0.499900 & & & & 3 & & & & 0.595532 \\ \hline
+\end{tabular}
+\end{table}
+\end{center}
+\bigskip
+\pagebreak
+\begin{center}
+{\huge $\alpha = 7$, $[a^{7} _r, b^{7} _r] = [0, 0.5]$}
+
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{ccccccccccc}
+\hline
+\multirow{2}{*}{\thead{Корень \\ $\xi_r ^*$}} & \multirow{2}{*}{\thead{Невязка \\ $f_{7} (\xi_r ^*)$}} & \multirow{2}{*}{$x_0 ^{(r)}$} & \multicolumn{5}{c}{Число итераций $N+1$} & \multirow{2}{*}{$M ^* _{(r)}$} & \multirow{2}{*}{$m ^* _{(r)}$} & \multirow{2}{*}{$q ^* _{(r)}$} \\ \cline{4-8}
+                  &                   &                   &  \thead{Половинное \\ деление}  &  \thead{Метод \\ хорд}  &  \thead{Простая \\ итерация}  &  \thead{Метод \\ Эткена} &  \thead{Метод \\ Ньютона} &                   &                   &                   \\ \hline
+0.068486 & -0.000003 & 0.499900 & & 4 & & & & 8.416230 & 3.500000 \\ \hline
+0.068485 & -0.000000 & 0.499900 & & & & & 3 & 8.416230 & 3.500000 \\ \hline
+0.068487 & -0.000015 & 0.499900 & & & 4 & & & & & 0.584187 \\ \hline
+0.068481 & 0.000032 & 0.499900 & 12 & & & & & & &  \\ \hline
+0.068485 & -0.000000 & 0.499900 & & & & 3 & & & & 0.584187 \\ \hline
+\end{tabular}
+\end{table}
+\end{center}
+\bigskip
+\begin{center}
+{\huge $\alpha = 8$, $[a^{8} _r, b^{8} _r] = [0, 0.5]$}
+
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{ccccccccccc}
+\hline
+\multirow{2}{*}{\thead{Корень \\ $\xi_r ^*$}} & \multirow{2}{*}{\thead{Невязка \\ $f_{8} (\xi_r ^*)$}} & \multirow{2}{*}{$x_0 ^{(r)}$} & \multicolumn{5}{c}{Число итераций $N+1$} & \multirow{2}{*}{$M ^* _{(r)}$} & \multirow{2}{*}{$m ^* _{(r)}$} & \multirow{2}{*}{$q ^* _{(r)}$} \\ \cline{4-8}
+                  &                   &                   &  \thead{Половинное \\ деление}  &  \thead{Метод \\ хорд}  &  \thead{Простая \\ итерация}  &  \thead{Метод \\ Эткена} &  \thead{Метод \\ Ньютона} &                   &                   &                   \\ \hline
+0.060818 & -0.000002 & 0.499900 & & 4 & & & & 9.416230 & 4.000000 \\ \hline
+0.060818 & -0.000000 & 0.499900 & & & & & 3 & 9.416230 & 4.000000 \\ \hline
+0.060819 & -0.000012 & 0.499900 & & & 4 & & & & & 0.575252 \\ \hline
+0.060822 & -0.000031 & 0.499900 & 14 & & & & & & &  \\ \hline
+0.060818 & -0.000000 & 0.499900 & & & & 3 & & & & 0.575252 \\ \hline
+\end{tabular}
+\end{table}
+\end{center}
+\bigskip
+\pagebreak
+\begin{center}
+{\huge $\alpha = 9$, $[a^{9} _r, b^{9} _r] = [0, 0.5]$}
+
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{ccccccccccc}
+\hline
+\multirow{2}{*}{\thead{Корень \\ $\xi_r ^*$}} & \multirow{2}{*}{\thead{Невязка \\ $f_{9} (\xi_r ^*)$}} & \multirow{2}{*}{$x_0 ^{(r)}$} & \multicolumn{5}{c}{Число итераций $N+1$} & \multirow{2}{*}{$M ^* _{(r)}$} & \multirow{2}{*}{$m ^* _{(r)}$} & \multirow{2}{*}{$q ^* _{(r)}$} \\ \cline{4-8}
+                  &                   &                   &  \thead{Половинное \\ деление}  &  \thead{Метод \\ хорд}  &  \thead{Простая \\ итерация}  &  \thead{Метод \\ Эткена} &  \thead{Метод \\ Ньютона} &                   &                   &                   \\ \hline
+0.054689 & -0.000002 & 0.499900 & & 4 & & & & 10.416230 & 4.500000 \\ \hline
+0.054689 & -0.000000 & 0.499900 & & & & & 3 & 10.416230 & 4.500000 \\ \hline
+0.054690 & -0.000010 & 0.499900 & & & 4 & & & & & 0.568032 \\ \hline
+0.054688 & 0.000012 & 0.499900 & 6 & & & & & & &  \\ \hline
+0.054689 & -0.000000 & 0.499900 & & & & 3 & & & & 0.568032 \\ \hline
+\end{tabular}
+\end{table}
+\end{center}
+\bigskip
+\begin{center}
+{\huge $\alpha = 10$, $[a^{10} _r, b^{10} _r] = [0, 0.5]$}
+
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{ccccccccccc}
+\hline
+\multirow{2}{*}{\thead{Корень \\ $\xi_r ^*$}} & \multirow{2}{*}{\thead{Невязка \\ $f_{10} (\xi_r ^*)$}} & \multirow{2}{*}{$x_0 ^{(r)}$} & \multicolumn{5}{c}{Число итераций $N+1$} & \multirow{2}{*}{$M ^* _{(r)}$} & \multirow{2}{*}{$m ^* _{(r)}$} & \multirow{2}{*}{$q ^* _{(r)}$} \\ \cline{4-8}
+                  &                   &                   &  \thead{Половинное \\ деление}  &  \thead{Метод \\ хорд}  &  \thead{Простая \\ итерация}  &  \thead{Метод \\ Эткена} &  \thead{Метод \\ Ньютона} &                   &                   &                   \\ \hline
+0.049678 & -0.000002 & 0.499900 & & 4 & & & & 11.416230 & 5.000000 \\ \hline
+0.049678 & -0.000000 & 0.499900 & & & & & 3 & 11.416230 & 5.000000 \\ \hline
+0.049679 & -0.000008 & 0.499900 & & & 4 & & & & & 0.562077 \\ \hline
+0.049683 & -0.000050 & 0.499900 & 12 & & & & & & &  \\ \hline
+0.049678 & -0.000000 & 0.499900 & & & & 3 & & & & 0.562077 \\ \hline
+\end{tabular}
+\end{table}
+\end{center}
+\bigskip
+\pagebreak
+\end{landscape}
+\end{document}
