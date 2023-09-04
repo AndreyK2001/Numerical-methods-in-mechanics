@@ -1,0 +1,52 @@
+\documentclass[a4paper]{article}
+\usepackage[12pt]{extsizes}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{setspace,amsmath}
+\usepackage[left=20mm, top=20mm, right=20mm, bottom=20mm, nohead, footskip=10mm, landscape]{geometry}
+\usepackage{indentfirst}
+\usepackage{multirow}
+\usepackage{fourier} 
+\usepackage{array}
+\usepackage{makecell}
+
+
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}} 
+
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}} 
+
+\begin{document}
+\renewcommand{\arraystretch}{2}
+\begin{center}
+{\Large Решение нелинейных алгебраических систем}
+\bigskip
+\end{center}
+
+
+Выполнил: Капелюшников Андрей Сергеевич
+
+\begin{equation*}
+\begin{cases}
+0.6x+7.5y+x^2y=0
+\\
+6x+\cos(y)=0
+\end{cases}
+\end{equation*}
+
+
+$\varepsilon = $0.0001
+
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{P{2cm} ccccccccc}
+\hline
+\multicolumn{2}{c}{Пара корней $\vec{\xi} ^* _r$} & \multirow{2}{*}{\thead{Норма невязки \\ $||\vec{f}(\xi ^* _r)||$}} & \multicolumn{2}{c}{Начальный вектор} & \multicolumn{3}{c}{Число итераций $N+1$} & \multirow{2}{*}{$q_r$} & \multirow{2}{*}{$\mu _r$} \\[2em] \cline{1-2} \cline{4-8}
+ $\xi ^* _r$ & $\eta ^* _r$ &                   &            $x_0 ^{(r)}$     &    $y_0 ^{(r)}$   &  \thead{Простая \\ итерация}  & \thead{Метод \\ Зейделя}  &   \thead{Метод \\ Ньютона}   &                   &                   \\ \hline
+-0.166743 & 0.013242 & 0.000548 & -0.155000&0.010000&12&       &      &0.079284&1.356043\\ \hline
+-0.166629 & 0.013312 & 0.000234 & -0.155000&0.010000& & 7& &0.079284&1.356044\\ \hline
+-0.166652 & 0.013283 & 0.000000 & -0.155000&0.010000& & & 2 & 0.079284&1.355107\\ \hline
+\end{tabular}
+\end{table}
+\bigskip
+\end{document}
